@@ -1,10 +1,13 @@
 using System.Security.Claims;
 using System.Security.Principal;
 using ASPNETCoreIdentitySample.DataLayer.Context;
+using ASPNETCoreIdentitySample.Entities;
 using ASPNETCoreIdentitySample.Entities.Identity;
+using ASPNETCoreIdentitySample.Services;
 using ASPNETCoreIdentitySample.Services.Contracts.Identity;
 using ASPNETCoreIdentitySample.Services.Identity;
 using ASPNETCoreIdentitySample.Services.Identity.Logger;
+using ASPNETCoreIdentitySample.Services.Services;
 using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -67,6 +70,12 @@ namespace ASPNETCoreIdentitySample.IocConfig
             services.AddScoped<IUsersPhotoService, UsersPhotoService>();
             services.AddScoped<ISecurityTrimmingService, SecurityTrimmingService>();
             services.AddScoped<IAppLogItemsService, AppLogItemsService>();
+
+
+            services.AddScoped<IRepository<Category>, Repository<Category>>();
+            services.AddScoped<ICategoryServices, CategoryServices>();
+
+            
 
             return services;
         }
