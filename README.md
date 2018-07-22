@@ -2,7 +2,7 @@
 
 سفارشی سازی ASP.NET Core Identity 2.1.1
 =======
-
+توسعه دهندگان : وحید نصیری، میلاد رئیسی
 
 
 ![dnt-identity-02](/src/ASPNETCoreIdentitySample/wwwroot/images/dnti02.png)
