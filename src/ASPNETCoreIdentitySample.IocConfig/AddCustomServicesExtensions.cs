@@ -75,7 +75,7 @@ namespace ASPNETCoreIdentitySample.IocConfig
             services.AddScoped<IRepository<Category>, Repository<Category>>();
             services.AddScoped<ICategoryServices, CategoryServices>();
 
-            
+
 
             return services;
         }
